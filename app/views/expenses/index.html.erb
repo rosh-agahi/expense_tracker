@@ -1,0 +1,16 @@
+<h2>Expenses</h2>
+
+<table>
+  <tr>
+    <th>Amount</th>
+    <th>Vendor</th>
+  </tr>
+
+  <% @expenses.each do |e| %>
+    <tr>
+      <td><%= e.amount %></td>
+      <td><%= e.vendor %></td>
+    </tr>
+  <% end %>
+
+</table>

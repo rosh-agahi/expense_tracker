@@ -1,6 +1,7 @@
 class ExpensesController < ApplicationController
 
   get '/expenses' do
+    @expenses = current_user.expenses
     erb :'/expenses/index.html'
   end
 
@@ -9,10 +10,10 @@ class ExpensesController < ApplicationController
     erb :'/expenses/new.html'
   end
 
-  post '/expenses/new' do
+  post '/expenses' do
     @expense = Expense.new
     @expense.date = Date.today
-    @expense.amount = params[:amount]
+    @expense.amount = params[:amount].to_f
     @expense.vendor = params[:vendor]
     @expense.description = params[:description]
     @expense.category_id = params[:category_id]
@@ -21,7 +22,7 @@ class ExpensesController < ApplicationController
     if @expense.save
       redirect "/expenses"
     else
-      erb :'users/new.html'
+      erb :'expenses/new.html'
     end
 
   end
