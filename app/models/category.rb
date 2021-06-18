@@ -1,5 +1,5 @@
 class Category < ActiveRecord::Base
-  belongs_to :expense
+  has_many :expenses
   belongs_to :user
 
 end

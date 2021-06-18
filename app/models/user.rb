@@ -1,6 +1,6 @@
 class User < ActiveRecord::Base
 
-  has_many :expenses
-  has_many :categories, through: :expenses
+  has_many :categories
+  has_many :expenses, through: :categories
 
 end
