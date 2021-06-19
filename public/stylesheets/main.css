@@ -110,5 +110,6 @@ ul {
 
 .tile {
   background-color: #72BEBC;
-  padding: 5px;
+  padding: 15px;
+  width: 20%;
 }

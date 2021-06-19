@@ -1,5 +1,11 @@
 <h2>Summary</h2>
 
+<div class="container">
 <% @categories.each do |c| %>
-  <div class="tile"><%= c.name %></div>
+  <div class="tile">
+    <%= c.name %>
+    <br>
+    <%= c.expense_sum %>
+  </div>
 <% end %>
+</div>
