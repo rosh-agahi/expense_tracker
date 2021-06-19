@@ -107,3 +107,8 @@ ul {
   padding: 0; /* Remove padding */
   margin: 0; /* Remove margins */
 }
+
+.tile {
+  background-color: #72BEBC;
+  padding: 5px;
+}
