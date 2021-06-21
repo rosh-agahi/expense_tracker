@@ -22,6 +22,9 @@
 </header>
 
 <div class="body">
+  <%= "<div class='top_notice_red'> #{flash[:notice_red]}</div>" if flash[:notice_red] %>
+  <%= "<div class='top_notice_green'> #{flash[:notice_green]}</div>" if flash[:notice_green] %>
+
   <%= yield %>
 </div>
 
