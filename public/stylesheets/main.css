@@ -124,3 +124,11 @@ ul {
   padding-top: 4px;
   font-size: 30px;
 }
+
+.top_notice_red {
+  color: red;
+}
+
+.top_notice_green {
+  color: green;
+}

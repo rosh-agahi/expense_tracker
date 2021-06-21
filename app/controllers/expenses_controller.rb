@@ -13,16 +13,17 @@ class ExpensesController < ApplicationController
   post '/expenses' do
     @expense = Expense.new
     @expense.date = Date.today
-    @expense.amount = params[:amount].to_f
+    @expense.amount = params[:amount]
     @expense.vendor = params[:vendor]
     @expense.description = params[:description]
     @expense.category_id = params[:category_id]
     @expense.user_id = current_user.id
 
-    if @expense.save
+    if @expense.valid? && @expense.save
       redirect "/expenses"
     else
-      erb :'expenses/new.html'
+      flash[:notice_red] = "The amount entered was invalid. If entering an amount less than 1, place a 0 before the decimal. If entering whole numbers, please place two zeros in the decimal places. Acceptable inputs include '23.00', '1.00', '0.97'"
+      redirect '/expenses/new'
     end
 
   end
