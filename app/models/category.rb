@@ -3,7 +3,7 @@ class Category < ActiveRecord::Base
   belongs_to :user
 
   def expense_sum
-    10
+    expenses.sum(:amount)
   end
 
 end
