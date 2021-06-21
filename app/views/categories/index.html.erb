@@ -1,4 +1,7 @@
-<h2>Summary</h2>
+<h3>Total Spend: 
+    <%= ActiveSupport::NumberHelper.number_to_currency(current_user.expenses.sum(:amount), :unit => "$") %>
+  </h3>
+
 
 <div class="container">
 <% @categories.each do |c| %>
