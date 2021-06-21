@@ -3,9 +3,8 @@
 <div class="container">
 <% @categories.each do |c| %>
   <div class="tile">
-    <%= c.name %>
-    <br>
-    <%= c.expense_sum %>
+    <div class="tile_name"><%= c.name %></div>
+    <div class="tile_sum"><%= c.expense_sum %></div>
   </div>
 <% end %>
 </div>

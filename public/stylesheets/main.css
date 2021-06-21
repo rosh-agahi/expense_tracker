@@ -109,7 +109,19 @@ ul {
 }
 
 .tile {
+  display: flex;
+  justify-content: center;
   background-color: #72BEBC;
   padding: 15px;
   width: 20%;
+}
+
+.tile_name {
+  text-align: center;
+}
+
+.tile_sum {
+  text-align: center;
+  padding-top: 4px;
+  font-size: 30px;
 }
