@@ -119,6 +119,7 @@ ul {
 }
 
 .tile_sum {
+  color: white;
   text-align: center;
   padding-top: 4px;
   font-size: 30px;
