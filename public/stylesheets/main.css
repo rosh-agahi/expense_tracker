@@ -109,8 +109,6 @@ ul {
 }
 
 .tile {
-  display: flex;
-  justify-content: center;
   background-color: #72BEBC;
   padding: 15px;
   width: 20%;
