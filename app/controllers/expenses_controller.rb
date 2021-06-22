@@ -28,5 +28,11 @@ class ExpensesController < ApplicationController
 
   end
 
+  delete '/expenses/:id' do
+    @expense = Expense.delete(params[:id])
+    redirect '/expenses'
+    end
+  end
+
 
 end
