@@ -23,6 +23,10 @@ class ApplicationController < Sinatra::Base
       User.find_by_id(session[:user_id])
     end
 
+    def dollar_display(amount)
+      ActiveSupport::NumberHelper.number_to_currency(amount, :unit => "$")
+    end
+
   end
 
 

@@ -3,7 +3,7 @@ class Category < ActiveRecord::Base
   belongs_to :user
 
   def expense_sum
-    ActiveSupport::NumberHelper.number_to_currency(expenses.sum(:amount), :unit => "$")
+    dollar_display(expenses.sum(:amount))
   end
 
 end

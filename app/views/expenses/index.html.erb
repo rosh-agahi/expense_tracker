@@ -17,7 +17,7 @@
         </form>
       </td>
       <td><a href='/expenses/<%= e.id %>/edit'>Edit</a></td>
-      <td><%= e.amount %></td>
+      <td><%= dollar_display(e.amount) %></td>
       <td><%= e.vendor %></td>
     </tr>
   <% end %>
