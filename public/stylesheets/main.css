@@ -136,3 +136,15 @@ ul {
 th {
   padding-right: 30px;
 }
+
+input.deletebutton {
+  color: white;
+  font-weight: bold;
+  background-color: red;
+  border-style: solid;
+  border-width: thin;
+  border-color: red;
+  border-radius: 5px;
+  text-align: center;
+
+}

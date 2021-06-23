@@ -2,7 +2,7 @@
 
 <table>
   <tr>
-    <th>Delete</th>
+    <th></th>
     <th>Edit</th>
     <th>Amount</th>
     <th>Vendor</th>
@@ -10,7 +10,12 @@
 
   <% @expenses.each do |e| %>
     <tr>
-      <td>Delete</td>
+      <td>
+        <form action="/expenses/<%= e.id %>" method="post">
+          <input type="hidden" name="_method" value="DELETE">
+          <input class="deletebutton" type="submit" value="X">
+        </form>
+      </td>
       <td>Edit</td>
       <td><%= e.amount %></td>
       <td><%= e.vendor %></td>

@@ -1,13 +1,19 @@
 class ExpensesController < ApplicationController
 
-  get '/expenses' do
-    @expenses = current_user.expenses
-    erb :'/expenses/index.html'
-  end
+  use Rack::MethodOverride
 
   get '/expenses/new' do
     @categories = current_user.categories
     erb :'/expenses/new.html'
+  end
+
+  get '/expenses/:id' do
+    "hello"
+  end
+
+  delete '/expenses/:id' do
+    @expense = Expense.delete(params[:id])
+    redirect '/expenses'
   end
 
   post '/expenses' do
@@ -28,8 +34,10 @@ class ExpensesController < ApplicationController
 
   end
 
-  delete '/expenses/:id' do
-    @expense = Expense.delete(params[:id])
-    redirect '/expenses'
+  get '/expenses' do
+    @expenses = current_user.expenses
+    erb :'/expenses/index.html'
   end
+
+
 end
