@@ -11,12 +11,12 @@
   <% @expenses.each do |e| %>
     <tr>
       <td>
-        <form action="/expenses/<%= e.id %>" method="post">
+        <form action="/expenses/<%= e.id %>/e" method="post">
           <input type="hidden" name="_method" value="DELETE">
           <input class="deletebutton" type="submit" value="X">
         </form>
       </td>
-      <td><a href='/expenses/<%= e.id %>/edit'>Edit</a></td>
+      <td><a class="editbutton" href='/expenses/<%= e.id %>/edit'>Edit</a></td>
       <td><%= dollar_display(e.amount) %></td>
       <td><%= e.vendor %></td>
     </tr>

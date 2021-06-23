@@ -23,7 +23,7 @@
         <input class="deletebutton" type="submit" value="X">
       </form>
     </td>
-    <td><a href='/expenses/<%= e.id %>/edit'>Edit</a></td>
+    <td><a class="editbutton" href='/expenses/<%= e.id %>/edit'>Edit</a></td>
     <td><%= e.date %></td>
     <td><%= e.vendor %></td>
     <td style="text-align: right;"><%= dollar_display(e.amount) %></td>

@@ -147,4 +147,20 @@ input.deletebutton {
   border-radius: 5px;
   text-align: center;
   margin: 0;
+  text-transform: uppercase;
+}
+
+a.editbutton {
+  color: white;
+  font-weight: bold;
+  background-color: blue;
+  border-style: solid;
+  border-width: thin;
+  border-color: blue;
+  border-radius: 5px;
+  text-align: center;
+  margin: 0;
+  text-decoration: none;
+  text-transform: uppercase;
+  padding: 1px 5px;
 }
