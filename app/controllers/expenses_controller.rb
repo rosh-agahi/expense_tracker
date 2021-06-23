@@ -13,6 +13,15 @@ class ExpensesController < ApplicationController
     erb :'/expenses/edit.html'
   end
 
+  patch '/expenses/:id' do
+    @expense = Expense.find_by_id(params[:id])
+    @expense.update(amount: params[:amount])
+    @expense.update(vendor: params[:vendor])
+    @expense.update(description: params[:description])
+    @expense.update(category_id: params[:category_id])
+    redirect "/expenses/:id"
+  end
+
   delete '/expenses/:id' do
     @expense = Expense.delete(params[:id])
     redirect '/expenses'
