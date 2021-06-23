@@ -1,0 +1,31 @@
+<h2>Edit Expense</h2>
+
+<form action="/expenses/<%= @expense.id %>" method="post">
+    <input type="hidden" name="_method" value="patch">
+
+    <p>
+      <label for="amount">Amount</label><br>
+      <input type="text" id="amount" name="amount" value="<%= @expense.amount %>"/>
+    </p>
+
+    <p>
+      <label for="vendor">Vendor</label><br>
+      <input type="text" id="vendor" name="vendor" value="<%= @expense.vendor %>"/>
+    </p>
+
+    <p>
+      <label for="description">Description</label><br>
+      <input type="text" id="description" name="description" value="<%= @expense.description %>"/>
+    </p>
+
+    <p>Expense Category</p>
+
+      <% @categories.each do |c| %>
+        <input type="radio" name="category_id" value="<%= c.id %>">
+        <label><%= c.name %></label><br>
+      <% end %>
+
+      <br>
+
+    <input type="submit" value="Save Changes" />
+</form>

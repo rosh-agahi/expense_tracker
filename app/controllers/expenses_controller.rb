@@ -7,8 +7,10 @@ class ExpensesController < ApplicationController
     erb :'/expenses/new.html'
   end
 
-  get '/expenses/:id' do
-    "hello"
+  get '/expenses/:id/edit' do
+    @expense = Expense.find_by_id(params[:id])
+    @categories = current_user.categories
+    erb :'/expenses/edit.html'
   end
 
   delete '/expenses/:id' do
