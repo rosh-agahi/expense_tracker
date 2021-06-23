@@ -2,12 +2,16 @@
 
 <table>
   <tr>
+    <th>Delete</th>
+    <th>Edit</th>
     <th>Amount</th>
     <th>Vendor</th>
   </tr>
 
   <% @expenses.each do |e| %>
     <tr>
+      <td>Delete</td>
+      <td>Edit</td>
       <td><%= e.amount %></td>
       <td><%= e.vendor %></td>
     </tr>
