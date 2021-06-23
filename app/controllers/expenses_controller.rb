@@ -19,7 +19,12 @@ class ExpensesController < ApplicationController
     @expense.update(vendor: params[:vendor])
     @expense.update(description: params[:description])
     @expense.update(category_id: params[:category_id])
-    redirect "/expenses/:id"
+    redirect "/expenses/#{@expense.id}"
+  end
+
+  get '/expenses/:id' do
+    @expense = Expense.find_by_id(params[:id])
+    erb :'/expenses/show.html'
   end
 
   delete '/expenses/:id' do

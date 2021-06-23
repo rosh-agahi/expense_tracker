@@ -1,0 +1,10 @@
+<h2>Expense</h2>
+
+<p>Amount: <%= @expense.amount %> </p>
+<p>Vendor: <%= @expense.vendor %> </p>
+<p>Description: <%= @expense.description %> </p>
+<p>Category: <%= @expense.category.name %> </p>
+
+<p>
+  <a href="/expenses/<%= @expense.id %>/edit">Edit Expense</a>
+</p>
