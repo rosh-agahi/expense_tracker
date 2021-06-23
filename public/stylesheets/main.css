@@ -132,3 +132,7 @@ ul {
 .top_notice_green {
   color: green;
 }
+
+th {
+  padding-right: 30px;
+}
