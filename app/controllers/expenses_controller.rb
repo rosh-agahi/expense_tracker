@@ -27,7 +27,12 @@ class ExpensesController < ApplicationController
     erb :'/expenses/show.html'
   end
 
-  delete '/expenses/:id' do
+  delete '/expenses/:id/c' do
+    @expense = Expense.delete(params[:id])
+    redirect "/categories/#{params[:category_id]}"
+  end
+
+  delete '/expenses/:id/e' do
     @expense = Expense.delete(params[:id])
     redirect '/expenses'
   end

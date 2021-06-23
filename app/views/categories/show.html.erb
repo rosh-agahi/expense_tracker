@@ -1,0 +1,33 @@
+<h2><%= @category.name %></h2>
+<a href="/categories/<%=@category.id%>/edit">Edit Category Name</a>
+
+<br>
+<br>
+
+<table>
+  <tr>
+    <th></th>
+    <th>Edit</th>
+    <th>Date</th>
+    <th>Vendor</th>
+    <th>Amount</th>
+    <th>Description</th>
+  </tr>
+
+  <% @category.expenses.each do |e| %>
+  <tr>
+    <td>
+      <form action="/expenses/<%= e.id %>/c" method="post">
+        <input type="hidden" name="_method" value="DELETE">
+        <input type="hidden" name="category_id" value="<%=@category.id%>">
+        <input class="deletebutton" type="submit" value="X">
+      </form>
+    </td>
+    <td><a href='/expenses/<%= e.id %>/edit'>Edit</a></td>
+    <td><%= e.date %></td>
+    <td><%= e.vendor %></td>
+    <td style="text-align: right;"><%= dollar_display(e.amount) %></td>
+    <td><%= e.description %></td>
+  </tr>
+  <% end %>
+</table>

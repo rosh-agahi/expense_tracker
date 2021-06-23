@@ -9,6 +9,11 @@ class CategoriesController < ApplicationController
     erb :'/categories/new.html'
   end
 
+  get '/categories/:id' do
+    @category = Category.find_by_id(params[:id])
+    erb :'/categories/show.html'
+  end
+
   post '/categories' do
     @category = Category.new
     @category.name = params[:name]
