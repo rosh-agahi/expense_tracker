@@ -188,7 +188,7 @@ a.editbutton {
   line-height: 50px;
 }
 
-input[type="text"] {
+input[type="text"], input[type="password"] {
   font-family: monospace;
   border: none;
   padding: 10px 10px;
