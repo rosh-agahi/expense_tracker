@@ -44,12 +44,18 @@ class ExpensesController < ApplicationController
   post '/expenses' do
     @expense = Expense.new
     @expense.date = Date.today
+    @expense.user_id = current_user.id
     @expense.amount = params[:amount]
     @expense.vendor = params[:vendor]
     @expense.description = params[:description]
-    @expense.category_id = params[:category_id]
-    @expense.user_id = current_user.id
 
+    if !params[:category_name].empty?
+      Category.create(name: params[:category_name], user_id: current_user.id)
+      @expense.category_id = current_user.categories.last.id
+    else
+      @expense.category_id = params[:category_id]
+    end
+    binding.pry
     if @expense.valid? && @expense.save
       redirect "/expenses"
     else

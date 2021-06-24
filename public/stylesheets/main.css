@@ -168,30 +168,31 @@ a.editbutton {
 .home_button {
   background-color: #72BEBC;
   padding: 10px;
-  border-radius: 25px;
   color: white;
   text-decoration: none;
   line-height: 50px;
 }
 
-input, text {
+input[type="text"] {
   font-family: monospace;
   border: none;
   padding: 10px 10px;
   margin: 0;
   width: 50%;
   background-color: #f2f2f2;
+  color: #359390;
 }
 
-.submit {
+input[type="submit"] {
+  border: none;
+  padding: 10px 10px;
+  margin: 0;
+  width: 50%;
   background-color: #72BEBC;
   color: white;
   font-weight: bold;
 }
 
-.radio {
-  width: 20px;
-}
 textarea {
   font-family: monospace;
   background-color: #f2f2f2;
@@ -200,4 +201,6 @@ textarea {
   height: 70px;
   resize: none;
   border: none;
+  color: #359390;
+
 }

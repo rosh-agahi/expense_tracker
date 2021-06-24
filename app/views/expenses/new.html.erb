@@ -6,7 +6,7 @@
 
       <p>
         <label for="amount">Amount</label><br>
-        <input type="text" id="amount" name="amount" />
+        <input type="text" id="amount" name="amount" placeholder="0.00"/>
       </p>
 
       <p>
@@ -19,12 +19,19 @@
         <textarea id="description" name="description"></textarea>
       </p>
 
-      <p>Expense Category</p>
-
+      <h3>Expense Category</h3>
+      <h4>Select from existing categories:</h4>
         <% @categories.each do |c| %>
           <input type="radio" class="radio" name="category_id" value="<%= c.id %>">
           <label><%= c.name %></label><br>
         <% end %>
+
+      <h4>Or add a new category:</h4>
+
+        <p>
+            <label for="category_name">Name</label><br>
+            <input type="text" name="category_name" id="new_category" />
+        </p>
 
         <br>
 
