@@ -1,6 +1,11 @@
+<a class="home_button" href="/categories/new">Add New Expense Category</a>
+<a class="home_button" href="/expenses/new">Add New Expense</a>
+<br>
+<br>
+
 <h3>Total Spend:
     <%= dollar_display(current_user.expenses.sum(:amount)) %>
-  </h3>
+</h3>
 
 
 <div class="container">
@@ -9,5 +14,13 @@
     <div class="tile_name"><a href="/categories/<%=c.id%>"><%= c.name %></a></div>
     <div class="tile_sum"><%= dollar_display(c.expense_sum) %></div>
   </div>
+<% end %>
+</div>
+
+<br>
+
+<div>
+<% @categories.each do |c| %>
+<p> <%= c.name %> <%= "|" * c.expense_percent %> <%= c.expense_percent %>% </p>
 <% end %>
 </div>
