@@ -2,6 +2,10 @@ class ExpensesController < ApplicationController
 
   use Rack::MethodOverride
 
+  before '/expenses*' do
+    authentication_required
+  end
+
   get '/expenses/new' do
     @categories = current_user.categories
     erb :'/expenses/new.html'
@@ -66,6 +70,6 @@ class ExpensesController < ApplicationController
       @expense = Expense.delete(params[:id])
     end
 
-  end 
+  end
 
 end

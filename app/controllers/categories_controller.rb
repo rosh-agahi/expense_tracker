@@ -1,5 +1,9 @@
 class CategoriesController < ApplicationController
 
+  before '/categories*' do
+    authentication_required
+  end
+
   get '/categories' do
     @categories = current_user.categories
     erb :'/categories/index.html'

@@ -27,6 +27,13 @@ class ApplicationController < Sinatra::Base
       !!current_user # hardens the true or false value return of current_user
     end
 
+    def authentication_required
+      if !logged_in?
+        flash[:notice_red] = "You must be logged in."
+        redirect '/login'
+      end
+    end
+
     def dollar_display(amount)
       ActiveSupport::NumberHelper.number_to_currency(amount, :unit => "$")
     end

@@ -1,5 +1,9 @@
 class UsersController < ApplicationController
 
+  before '/users/*'do
+    authentication_required
+  end
+
   get '/register' do
     erb :'users/new.html'
   end
