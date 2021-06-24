@@ -25,6 +25,7 @@ img.headerimage {
   max-width: 70%;
   max-height: 170px;
 }
+
 .container {
   display: flex;
   flex-wrap: wrap;
@@ -40,6 +41,10 @@ img.headerimage {
 }
 
 .logobox {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
   background-color: #72BEBC;
   top: 0;
   left: 0;
