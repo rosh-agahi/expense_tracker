@@ -11,7 +11,7 @@
 <div class="container">
 <% @categories.each do |c| %>
   <div class="tile">
-    <div class="tile_name"><a href="/categories/<%=c.id%>"><%= c.name %></a></div>
+    <div class="tile_name"><a class="tile_name_a" href="/categories/<%=c.id%>"><%= c.name %></a></div>
     <div class="tile_sum"><%= dollar_display(c.expense_sum) %></div>
   </div>
 <% end %>

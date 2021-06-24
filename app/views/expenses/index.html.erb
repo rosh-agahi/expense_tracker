@@ -6,16 +6,20 @@
 
 <table>
   <tr>
-    <th></th>
-    <th></th>
     <th>Date</th>
     <th>Amount</th>
     <th>Vendor</th>
     <th>Description</th>
+    <th></th>
+    <th></th>
   </tr>
 
   <% @expenses.each do |e| %>
     <tr>
+      <td><%= e.date %></td>
+      <td><%= dollar_display(e.amount) %></td>
+      <td><%= e.vendor %></td>
+      <td><%= e.description %></td>
       <td class="delete_b">
         <form action="/expenses/<%= e.id %>/e" method="post">
           <input type="hidden" name="_method" value="DELETE">
@@ -23,11 +27,6 @@
         </form>
       </td>
       <td><a class="editbutton" href='/expenses/<%= e.id %>/edit'>Edit</a></td>
-      <td><%= e.date %></td>
-      <td><%= dollar_display(e.amount) %></td>
-      <td><%= e.vendor %></td>
-      <td><%= e.description %></td>
-
     </tr>
   <% end %>
 
