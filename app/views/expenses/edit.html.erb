@@ -21,11 +21,11 @@
     <p>Expense Category</p>
 
       <% @categories.each do |c| %>
-        <input type="radio" name="category_id" value="<%= c.id %>" <%='checked' if @expense.category_id == c.id %> >
+        <input type="radio" class="radio" name="category_id" value="<%= c.id %>" <%='checked' if @expense.category_id == c.id %> >
         <label><%= c.name %></label><br>
       <% end %>
 
       <br>
 
-    <input type="submit" value="Save Changes" />
+    <input type="submit" class="submit" value="Save Changes" />
 </form>

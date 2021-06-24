@@ -22,12 +22,12 @@
       <p>Expense Category</p>
 
         <% @categories.each do |c| %>
-          <input type="radio" name="category_id" value="<%= c.id %>">
+          <input type="radio" class="radio" name="category_id" value="<%= c.id %>">
           <label><%= c.name %></label><br>
         <% end %>
 
         <br>
 
-      <input type="submit" value="Add Expense" />
+      <input type="submit" class="submit" value="Add Expense" />
 
     </form>
