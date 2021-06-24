@@ -55,7 +55,7 @@ class ExpensesController < ApplicationController
     else
       @expense.category_id = params[:category_id]
     end
-    binding.pry
+
     if @expense.valid? && @expense.save
       redirect "/expenses"
     else
