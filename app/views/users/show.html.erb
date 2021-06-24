@@ -1,5 +1,8 @@
-<h2>User Show Page, aka User Home</h2>
-<p>Welcome, <%= @user.name %></p>
 
-<a href="/categories/new">Add Expense Category</a>
-<a href="/expenses/new">Add Expense</a>
+<h2>Welcome, <%= @user.name %></h2>
+
+<a class="home_button" href="/categories">See Category Summary</a>
+<br>
+<a class="home_button" href="/categories/new">Add New Expense Category</a>
+<br>
+<a class="home_button" href="/expenses/new">Add New Expense</a>

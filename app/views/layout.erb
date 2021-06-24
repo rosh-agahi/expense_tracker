@@ -13,9 +13,9 @@
   <div class="menu_bar">
     <nav class="menu_bar">
       <% if logged_in? %>
-        <div class="menu_items"> <a class="menu" href="/expenses/new">Add New Expense</a> </div>
-        <div class="menu_items"> <a class="menu" href="/expenses">View All Expenses</a> </div>
-        <div class="menu_items"> <a class="menu" href="/categories">Summary</a> </div>
+        <div class="menu_items"> <a class="menu" href="/users/<%= current_user.id %>">Home</a> </div>
+        <div class="menu_items"> <a class="menu" href="/expenses">Expenses</a> </div>
+        <div class="menu_items"> <a class="menu" href="/categories">Categories</a> </div>
         <div class="menu_items"> <a class="menu" href="/logout">Logout</a> </div>
       <% else %>
         <div class="menu_items"> <a class="menu" href="/">Home</a> </div>
