@@ -27,8 +27,7 @@ img.headerimage {
 }
 .container {
   display: flex;
-  flex-direction: row;
-  justify-content: space-between;
+  flex-wrap: wrap;
   align-items: center;
 }
 
@@ -37,6 +36,7 @@ img.headerimage {
   flex-direction: row;
   justify-content: space-between;
   align-items: stretch;
+
 }
 
 .logobox {
@@ -112,6 +112,9 @@ ul {
   background-color: #72BEBC;
   padding: 15px;
   width: 20%;
+  margin-bottom: 10px;
+  margin-right: 10px;
+
 }
 
 .tile_name {
