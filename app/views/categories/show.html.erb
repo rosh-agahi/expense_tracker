@@ -1,4 +1,6 @@
 <h2><%= @category.name %></h2>
+
+<div class="container">
 <a class="home_button" href="/categories/<%=@category.id%>/edit">Edit Category Name</a>
 <% if @category.expenses.count == 0 %>
     <form action="/categories/<%= @category.id %>" method="post">
@@ -6,6 +8,7 @@
       <input class="delete_category" type="submit" value="Delete Category">
     </form>
 <% end %>
+</div>
 
 <br>
 <br>
