@@ -21,7 +21,7 @@
 <br>
 
 <table>
-  <% @categories.each do |c| %>
+  <% @categories.sort_by(&:expense_sum).reverse.each do |c| %>
     <tr>
       <td> <%= c.name %> </td>
       <td style="color: teal; text-align: right;"><strong><%= c.expense_percent.round(1) %>% </strong></td>
