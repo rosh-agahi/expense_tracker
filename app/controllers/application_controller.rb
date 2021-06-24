@@ -20,7 +20,11 @@ class ApplicationController < Sinatra::Base
   helpers do
 
     def current_user
-      User.find_by_id(session[:user_id])
+      @user ||= User.find(session[:user_id]) if session[:user_id]
+    end
+
+    def logged_in?
+      !!current_user # hardens the true or false value return of current_user
     end
 
     def dollar_display(amount)
