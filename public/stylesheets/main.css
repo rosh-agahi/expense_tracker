@@ -133,33 +133,43 @@ ul {
   color: green;
 }
 
+
+
 th {
-  padding-right: 30px;
+  font-size: 20px;
+  font-weight: bolder;
+  padding-right: 20px;
+  padding-left: 2px;
 }
 
-input.deletebutton {
+td {
+  vertical-align: middle;
+  padding-left: 2px;
+  padding-right: 10px;
+  height: 28px;
+}
+
+input[type="submit"].deletebutton {
   color: white;
-  font-weight: bold;
-  background-color: red;
-  border-style: solid;
-  border-width: thin;
-  border-color: red;
-  border-radius: 5px;
-  text-align: center;
-  margin: 0;
+  background-color: crimson;
   text-transform: uppercase;
+  padding: 2px 5px;
+  font-size: inherit;
+  line-height: inherit;
+  border: 1px solid crimson;
+  width: 25px;
+  text-align: center
+}
+
+form {
+  margin: 0;
 }
 
 a.editbutton {
   color: white;
   font-weight: bold;
-  background-color: blue;
-  border-style: solid;
-  border-width: thin;
-  border-color: blue;
-  border-radius: 5px;
+  background-color: teal;
   text-align: center;
-  margin: 0;
   text-decoration: none;
   text-transform: uppercase;
   padding: 1px 5px;
@@ -185,8 +195,7 @@ input[type="text"] {
 
 input[type="submit"] {
   border: none;
-  padding: 10px 10px;
-  margin: 0;
+  padding: 10px 0;
   width: 50%;
   background-color: #72BEBC;
   color: white;
