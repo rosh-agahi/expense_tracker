@@ -18,6 +18,11 @@ class CategoriesController < ApplicationController
     erb :'/categories/show.html'
   end
 
+  delete '/categories/:id' do
+    @category = Category.delete(params[:id])
+    redirect "/categories"
+  end
+
   post '/categories' do
     @category = Category.new
     @category.name = params[:name]

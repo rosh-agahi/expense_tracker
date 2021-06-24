@@ -25,7 +25,7 @@
     <tr>
       <td> <%= c.name %> </td>
       <td style="color: teal; text-align: right;"><strong><%= c.expense_percent.round(1) %>% </strong></td>
-      <td> <%= "|" * c.expense_percent.round(0) %> </td>
+      <td class="bar"> <%= "|" * c.expense_percent.round(0) %> </td>
     </tr>
   <% end %>
 </table>

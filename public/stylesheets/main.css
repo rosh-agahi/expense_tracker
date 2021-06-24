@@ -148,8 +148,6 @@ a.tile_name_a {
   color: green;
 }
 
-
-
 th {
   font-size: 20px;
   font-weight: bolder;
@@ -169,16 +167,20 @@ td.delete_b {
   padding-right: 10px;
 }
 
+td.bar {
+  color: lightsalmon;
+  font-family: math;
+  font-size: large;
+  font-weight: bolder;
+}
 input[type="submit"].deletebutton {
   color: white;
-  background-color: crimson;
+  background-color: lightsalmon;
   text-transform: uppercase;
   padding: 2px 5px;
-  font-size: inherit;
-  line-height: inherit;
-  border: 1px solid crimson;
-  width: 25px;
-  text-align: center
+  font-size: medium;
+  text-align: center;
+  line-height: normal; width: auto;
 }
 
 form {
@@ -188,7 +190,7 @@ form {
 a.editbutton {
   color: white;
   font-weight: bold;
-  background-color: teal;
+  background-color: #72BEBC;
   text-align: center;
   text-decoration: none;
   text-transform: uppercase;
@@ -197,6 +199,16 @@ a.editbutton {
 
 .home_button {
   background-color: #72BEBC;
+  padding: 10px;
+  color: white;
+  text-decoration: none;
+  line-height: 50px;
+}
+
+input[type="submit"].delete_category {
+  background-color: lightsalmon;
+  font-family: 'Open Sans';
+  font-size: medium;
   padding: 10px;
   color: white;
   text-decoration: none;
