@@ -3,6 +3,8 @@ class Category < ActiveRecord::Base
   has_many :expenses
   belongs_to :user
 
+  validates_presence_of :name
+
   def expense_sum
     expenses.sum(:amount)
   end

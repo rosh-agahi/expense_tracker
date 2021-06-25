@@ -5,5 +5,6 @@ class User < ActiveRecord::Base
   has_many :expenses, through: :categories
 
   validates_uniqueness_of(:username)
-
+  validates_presence_of :username, :name, :password
+   
 end
