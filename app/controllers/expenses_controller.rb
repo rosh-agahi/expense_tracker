@@ -59,7 +59,7 @@ class ExpensesController < ApplicationController
     if @expense.valid? && @expense.save
       redirect "/expenses"
     else
-      flash[:notice_red] = "The amount entered was invalid. If entering an amount less than 1, place a 0 before the decimal. If entering whole numbers, please place two zeros in the decimal places. Acceptable inputs include '23.00', '1.00', '0.97'"
+      flash[:notice_red] = "A new expense requires an amount and a category."
       redirect '/expenses/new'
     end
 

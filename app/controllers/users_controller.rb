@@ -17,6 +17,7 @@ class UsersController < ApplicationController
     if @user.save
       redirect "/login"
     else
+      flash[:notice_red] = "Please include a name, username and password when registering for a new account."
       erb :'users/new.html'
     end
 

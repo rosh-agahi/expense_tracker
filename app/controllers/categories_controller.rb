@@ -31,6 +31,7 @@ class CategoriesController < ApplicationController
     if @category.save
       redirect "/categories"
     else
+      flash[:notice_red] = "Can't save a category without a name. Please enter a valid name for a category."
       erb :'categories/new.html'
     end
 
