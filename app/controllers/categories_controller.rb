@@ -9,14 +9,16 @@ class CategoriesController < ApplicationController
     erb :'/categories/index.html'
   end
 
+  get '/categories/:id/edit' do
+    find_category
+    erb :'/categories/edit.html'
+  end
+
   get '/categories/new' do
     erb :'/categories/new.html'
   end
 
-  get 'categories/:id/edit' do
-    find_category
-    erb :'/categories/edit.html'
-  end
+
 
   patch '/categories/:id' do
     find_category
