@@ -10,7 +10,11 @@ class Category < ActiveRecord::Base
   end
 
   def expense_percent
-    expense_sum * 100 / self.user.expenses.sum(:amount)
+    if expense_sum == 0
+      0
+    else
+      expense_sum * 100 / self.user.expenses.sum(:amount)
+    end 
   end
 
 end
