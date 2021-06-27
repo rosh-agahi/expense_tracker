@@ -17,8 +17,8 @@ class UsersController < ApplicationController
     if @user.save
       redirect "/login"
     else
-      flash[:notice_red] = "Please include a name, username and password when registering for a new account."
-      erb :'users/new.html'
+      new_user_errors
+      redirect '/register'
     end
 
   end
@@ -50,6 +50,14 @@ class UsersController < ApplicationController
   get '/logout' do
     session.clear
     redirect '/'
+  end
+
+  def new_user_errors
+    if @user.errors.include?("username")
+      flash[:notice_red] = "Username is taken. Please use a unique username."
+    elsif @user.errors.include?("name") || @user.errors.include?("password")
+      flash[:notice_red] = "Registration requires a name, unique username, and password."
+    end
   end
 
 end
