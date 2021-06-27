@@ -28,6 +28,7 @@ class CategoriesController < ApplicationController
 
     @category.update(name: params[:name])
     redirect "/categories/#{@category.id}"
+    end
 
   end
 
