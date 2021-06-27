@@ -1,0 +1,15 @@
+<h2>Edit Category</h2>
+
+<form action="/categories/<%= @category.id %>" method ="POST">
+  <input type="hidden" name="_method" value="patch">
+
+
+  <p>
+    <label for="name">Category Name</label><br>
+    <input type="text" id="name" name="name" value="<%= @category.name %>"/>
+  </p>
+
+
+  <input type="submit" class="submit" value="Save" />
+
+</form>
